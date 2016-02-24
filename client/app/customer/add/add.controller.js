@@ -1,13 +1,13 @@
 
 'use strict';
 (function () {
-	function CustomerAddController($scope, $http) {
+	function CustomerAddController($scope, $http, $state) {
 
 		$scope.customer = {};
 		$scope.saveCustomer = function(){
 			$http.post('/api/customer/add', $scope.customer)
 				.success(function(){
-					console.log('保存成功');
+					$state.go('customer');
 				})
 				.error(function(e){
 					console.log(e);
