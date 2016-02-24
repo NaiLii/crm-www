@@ -5,16 +5,16 @@
 (function () {
 	function CustomerController($scope, $http) {
 
-		$scope.customer = {};
-		$scope.saveCustomer = function(){
-			$http.post('/api/customer/add', $scope.customer)
-				.success(function(){
-					console.log('保存成功');
-				})
-				.error(function(e){
-					console.log(e);
+		$scope.customers = [];
+
+		$scope.getCustomers = function(){
+			$http.get('/api/customer/my')
+				.success(function(data){
+					$scope.customers = data;
 				});
 		};
+
+		$scope.getCustomers();
 	}
 
 	angular.module('crmWwwApp')

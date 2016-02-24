@@ -1,6 +1,4 @@
-/**
- * Created by knix on 16/2/23.
- */
+
 'use strict';
 
 angular.module('crmWwwApp')

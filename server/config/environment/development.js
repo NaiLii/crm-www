@@ -8,8 +8,8 @@ module.exports = {
     uri: 'mongodb://localhost/meetingwww-dev'
   },
   proxy: {
-    path: 'http://localhost:9034'
+    path: 'http://localhost:9034/api'
   },
 
-  seedDB: true
+  seedDB: false
 };
