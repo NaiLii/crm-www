@@ -36,30 +36,47 @@
     color: #000;
     padding: 0.2em 0;
 }
+.color-gray{
+    color: #cccccc;
+}
+
 .max-64 {
     max-width: 64px;
     max-height: 64px;
 }
-.max-48{
+
+.max-48 {
     max-width: 48px;
     max-height: 48px;
 }
-.max-36{
+
+.max-36 {
     max-width: 36px;
     max-height: 36px;
 }
-.max-32{
+
+.max-32 {
     max-width: 32px;
     max-height: 32px;
 }
+
 .customer-item {
-    max-height:64px;
+    padding-left:10px;
+    padding-right: 10px;
+    max-height: 64px;
     border-bottom: 1px solid #ccc;
+    cursor: pointer;
 }
-.customer-item .customer-icon{
+
+.customer-item:hover {
+    background-color: #f3f3f3;
+}
+
+.customer-item .customer-icon {
     display: inline-block;
 }
-.customer-item .customer-name{
+
+.customer-item .customer-name {
     display: inline-block;
     line-height: 64px;
 }

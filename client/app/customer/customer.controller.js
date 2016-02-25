@@ -3,18 +3,18 @@
  */
 'use strict';
 (function () {
-	function CustomerController($scope, $http) {
-
+	function CustomerController($scope, $http, $location) {
 		$scope.customers = [];
-
-		$scope.getCustomers = function(){
+		$scope.getCustomers = function () {
 			$http.get('/api/customer/my')
-				.success(function(data){
+				.success(function (data) {
 					$scope.customers = data;
 				});
 		};
-
 		$scope.getCustomers();
+		$scope.showDetail = function (cid) {
+			$location.url('/customer/detail/' + cid);
+		};
 	}
 
 	angular.module('crmWwwApp')

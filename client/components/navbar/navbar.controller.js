@@ -3,10 +3,7 @@
 angular.module('crmWwwApp')
   .controller('NavbarCtrl', function ($scope, Auth) {
     $scope.menu = [{
-      'title': 'Home',
-      'state': 'main'
-    },{
-      'title': 'Customer',
+      'title': '我的客户',
       'state': 'customer'
     }];
 

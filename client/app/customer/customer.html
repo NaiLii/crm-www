@@ -2,7 +2,6 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12">
-			<h3>我的客户</h3>
 			<div>
 				<div class="customer-item">
 					<div class="customer-icon">
@@ -13,11 +12,14 @@
 					</div>
 				</div>
 				<div class="customer-item" ng-repeat="c in customers">
-					<div class="customer-icon">
-						<img class="max-36" src="http://file.gddata.net/tas/defaulticon.jpg">
-					</div>
-					<div class="customer-name">
-						{{c.name}}
+					<div ng-click="showDetail(c.id)">
+						<div class="customer-icon">
+							<img class="max-36" src="http://file.gddata.net/tas/defaulticon.jpg">
+						</div>
+						<div class="customer-name">
+							<strong>{{c.name}}</strong>
+							<span class="color-gray">{{c.birthday}}</span>
+						</div>
 					</div>
 				</div>
 			</div>
