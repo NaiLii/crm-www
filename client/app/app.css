@@ -36,6 +36,16 @@
     color: #000;
     padding: 0.2em 0;
 }
+/*reset bootstrap*/
+.bottom-0{
+    margin-bottom: 0px;
+}
+.bottom-5{
+    margin-bottom: 5px;
+}
+.bottom-5 .navbar{
+    margin-bottom: 5px;
+}
 .color-gray{
     color: #cccccc;
 }
@@ -44,7 +54,6 @@
     max-width: 64px;
     max-height: 64px;
 }
-
 .max-48 {
     max-width: 48px;
     max-height: 48px;
@@ -63,7 +72,7 @@
 .customer-item {
     padding-left:10px;
     padding-right: 10px;
-    max-height: 64px;
+    max-height: 52px;
     border-bottom: 1px solid #ccc;
     cursor: pointer;
 }
@@ -78,5 +87,5 @@
 
 .customer-item .customer-name {
     display: inline-block;
-    line-height: 64px;
+    line-height: 52px;
 }
