@@ -2,13 +2,26 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12">
+			<div class="form-group has-success">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<span class="glyphicon glyphicon-search"></span>
+					</span>
+					<input type="text"
+					       class="form-control"
+					       id="inputGroupSuccess1"
+					       aria-describedby="inputGroupSuccess1Status"
+					       ng-model="search.keyword"
+							ng-change="changeWord()">
+				</div>
+			</div>
 			<div>
-				<div class="customer-item">
+				<div class="customer-item" ng-click="newCustomer()" ng-if="!search.keyword">
 					<div class="customer-icon">
 						<img class="max-36" src="http://file.gddata.net/tas/defaulticon.jpg">
 					</div>
 					<div class="customer-name">
-						<a href="/customer/add">新的客户</a>
+						新的客户
 					</div>
 				</div>
 				<div class="customer-item" ng-repeat="c in customers">
