@@ -29,6 +29,9 @@
 /**
  * App-wide Styles
  */
+body{
+    padding-top:55px;
+}
 
 .browserupgrade {
     margin: 0.2em 0;
