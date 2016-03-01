@@ -20,14 +20,17 @@
 						新的客户
 					</div>
 				</div>
-				<div class="customer-item" ng-repeat="c in customers">
-					<div ng-click="showDetail(c.id)">
-						<div class="customer-icon">
-							<img class="max-36" src="http://file.gddata.net/tas/defaulticon.jpg">
-						</div>
-						<div class="customer-name">
-							<strong>{{c.name}}</strong>
-							<span class="color-gray">{{c.birthday}}</span>
+				<div ng-repeat="l in customerList">
+					<div class="group-name">{{l[0].group}}</div>
+					<div class="customer-item" ng-repeat="c in l">
+						<div ng-click="showDetail(c.id)">
+							<div class="customer-icon">
+								<img class="max-36" src="http://file.gddata.net/tas/defaulticon.jpg">
+							</div>
+							<div class="customer-name">
+								<strong>{{c.name}}</strong>
+								<span class="color-gray">{{c.birthday}}</span>
+							</div>
 						</div>
 					</div>
 				</div>
