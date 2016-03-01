@@ -21,8 +21,8 @@
 					</div>
 				</div>
 				<div ng-repeat="l in customerList">
-					<div class="group-name">{{l[0].group}}</div>
-					<div class="customer-item" ng-repeat="c in l">
+					<div class="group-name">{{l.letter}}</div>
+					<div class="customer-item" ng-repeat="c in l.list">
 						<div ng-click="showDetail(c.id)">
 							<div class="customer-icon">
 								<img class="max-36" src="http://file.gddata.net/tas/defaulticon.jpg">

@@ -10,6 +10,7 @@
 			keyword: ''
 		};
 		$scope.customerList = {};
+		var arr = [];
 		$scope.getCustomers = function () {
 			$http.get('/api/customer/my')
 				.success(function (data) {
@@ -18,15 +19,30 @@
 					console.log(data);
 					$scope.customers.forEach(function (c) {
 						var letter = c.letter.substring(0, 1).toUpperCase();
-						c.group = letter;
-						if ($scope.customerList[letter]) {
-							$scope.customerList[letter].push(c);
-						} else {
-							$scope.customerList[letter] = [];
-							$scope.customerList[letter].push(c);
+						var pos = _.findIndex(arr, function (d) {
+							return d.letter === letter;
+						});
+						if (pos > -1) {
+							arr[pos].list.push(c);
 						}
+						else {
+							var doc = {
+								letter: letter,
+								list: []
+							};
+							doc.list.push(c);
+							arr.push(doc);
+						}
+						//c.group = letter;
+						//if ($scope.customerList[letter]) {
+						//	$scope.customerList[letter].push(c);
+						//} else {
+						//	$scope.customerList[letter] = [];
+						//	$scope.customerList[letter].push(c);
+						//}
 					});
-					$scope.customerList.sort(function(a,b){return a.letter > b.letter;});
+					$scope.customerList = arr;
+					$scope.customerList.sort(function(a,b){return a.letter> b.letter;});
 				});
 		};
 		$scope.getCustomers();
