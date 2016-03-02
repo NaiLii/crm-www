@@ -20,7 +20,7 @@
 						新的客户
 					</div>
 				</div>
-				<div ng-repeat="l in customerList">
+				<div ng-repeat="l in pageCustomers">
 					<div class="group-name">{{l.letter}}</div>
 					<div class="customer-item" ng-repeat="c in l.list">
 						<div ng-click="showDetail(c.id)">
