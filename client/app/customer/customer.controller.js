@@ -6,6 +6,7 @@
 	function CustomerController($scope, $http, $location) {
 		$scope.customers = [];
 		$scope.originCustomers = [];
+		$scope.willBirthdayCount = 0;
 		$scope.search = {
 			keyword: ''
 		};
@@ -42,6 +43,11 @@
 			$http.get('/api/customer/my')
 				.success(function (data) {
 					$scope.originCustomers = _.clone(data);
+					$scope.willBirthdayCount = data
+						.filter(function (y) {
+							return y.willBirthday;
+						})
+						.length;
 					getlist(data, '');
 				});
 		};

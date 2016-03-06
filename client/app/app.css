@@ -72,6 +72,10 @@ body{
     max-height: 32px;
 }
 
+.icon-gift{
+    color: #ff0000;
+}
+/*  -----customer start-----*/
 .customer-item {
     padding-left:10px;
     padding-right: 10px;
@@ -95,3 +99,14 @@ body{
     display: inline-block;
     line-height: 52px;
 }
+
+.willBirthdayCount{
+    background-color: #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 12px 0px;
+    color: #ff0000;
+}
+/*-----customer end-----*/

@@ -11,6 +11,9 @@
 					       ng-change="changeWord()">
 				</div>
 			</div>
+			<div ng-if="willBirthdayCount" class="willBirthdayCount">
+				即将有{{willBirthdayCount}}位过生日了！
+			</div>
 			<div>
 				<div class="customer-item" ng-click="newCustomer()" ng-if="!search.keyword">
 					<div class="customer-icon">
@@ -29,6 +32,7 @@
 							</div>
 							<div class="customer-name">
 								<strong>{{c.name}}</strong>
+								<span ng-if="c.willBirthday" class="glyphicon glyphicon-gift icon-gift"></span>
 								<span class="color-gray">{{c.birthday}}</span>
 							</div>
 						</div>
