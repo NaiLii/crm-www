@@ -5,6 +5,9 @@ angular.module('crmWwwApp')
     $scope.menu = [{
       'title': '我的客户',
       'state': 'customer'
+    },{
+      'title': '即将生日',
+      'state': 'birthday'
     }];
 
     $scope.isCollapsed = true;
