@@ -5,8 +5,8 @@ angular.module('crmWwwApp')
     $stateProvider
       .state('main', {
         url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
+        templateUrl: 'app/customer/customer.html',
+        controller: 'CustomerController',
         controllerAs: 'main'
       });
   });
